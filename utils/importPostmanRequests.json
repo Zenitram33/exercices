@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "eebd60a2-ec52-422f-bf8f-dbe57d78cb07",
+		"name": "INNSO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"authorName\": \"Jérémie Durand\",\n\t\"content\": \"Bonjour, j'ai un problème avec mon nouveau téléphone\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"clientName\": \"Jérémie Durand\",\n\t\"messages\": [\n\t\t{\n    \t\t\"id\": 1,\n    \t\t\"creationDate\": \"2022-01-25\",\n    \t\t\"authorName\": \"Jérémie Durand\",\n    \t\t\"content\": \"Bonjour, j'ai un problème\",\n    \t\t\"channel\": null\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer-files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer-files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"authorName\": \"Sonia Valentin\",\n\t\"content\": \"Je suis Sonia, et je vais mettre tout en oeuvre pour vous aider. Quel est le modèle de votre téléphone ?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer-files/2/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer-files",
+						"2",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request 4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reference\" : \"KA-18B6\"\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customer-files/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer-files",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customer-files/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customer-files",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
